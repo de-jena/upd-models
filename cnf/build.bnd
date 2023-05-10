@@ -2,7 +2,7 @@
 	geckoEMF
 
 
-github-project: de.jena.udp-models
+github-project: de.jena.upd-models
 base-version: 1.0.0
 
 # Maven Central Group-Id
