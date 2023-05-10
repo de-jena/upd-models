@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.upd.trafficos.publictransport.model/src" modelPluginID="de.jena.upd.trafficos.publictransport.model"
+    modelName="tos-publictransport" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../de.jena.upd.trafficos.common.model/model/tos-common.genmodel#//common"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>tos-publictransport.ecore</foreignModel>
+  <genPackages prefix="TOSPublicTransport" basePackage="de.jena.upd.trafficos.publictransport.model"
+      disposableProviderFactory="true" ecorePackage="tos-publictransport.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PublicTransportType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportType/TRAM"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportType/CITY_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportType/REGIONAL_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PublicTransportDataValueType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/DOOR_CHANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/TELEGRAM"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/GEO_INFO"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/LOCATION_MESSAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/DOOR_COUNT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDataValueType/STOP_REQUESTED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PublicTransportDoorChangeType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorChangeType/DOOR_CLOSE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorChangeType/DOOR_OPEN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PublicTransportDoorCountingType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/ADULT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/CHILD"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/BIKE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/WHEEL_CHAIR"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/PARAM"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/UNIDENTIFIED"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorCountingType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PublicTransportDoorSideType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorSideType/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PublicTransportDoorSideType/LEFT"/>
+    </genEnums>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportConfiguration/publicTransport"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLine/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportLine/timeTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLine/lineNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportTimeTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportTimeTable/entry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportTimeTable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportTimeTableEntry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportTimeTableEntry/firstStation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportTimeTableEntry/lastStation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportTimeTableEntry/stops"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportStop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportStop/station"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportStop/expectedArrivalTime"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportStation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportStation/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportStation/doorSide"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportDataEntry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportDataEntry/dataValue"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportDataValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDataValue/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDataValue/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportDataValue/lineRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportDataValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDataValue/timeTableEntryRef"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportDataValueObject"/>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportTelegram"/>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportPosition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PublicTransportPosition/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportPosition/atStop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportPosition/stationName"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportDoorChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorChange/doorId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorChange/doorSide"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorChange/type"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportLocMsg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/lineNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/tripNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/routeNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/travelNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/counter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/kilometer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/posState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/lastStop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/nextStop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/actualTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/expectedTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/gps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/odo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportLocMsg/door"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportDoorCount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorCount/doorId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorCount/doorSide"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorCount/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorCount/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportDoorCount/out"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PublicTransportStopRequested">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PublicTransportStopRequested/stopRequested"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
