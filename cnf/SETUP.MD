@@ -2,11 +2,11 @@
 
 ## Basics
 
-The Maven group-id is defaulted to **de.jena.udp-models** in *cnf/build.bnd* using the bnd **-groupid** instruction.
+The Maven group-id is defaulted to **de.jena.upd-models** in *cnf/build.bnd* using the bnd **-groupid** instruction.
 
 ## Github - Create Project
 - Create a empty [GitHub repository](https://github.com/organizations/geckoprojects-org/repositories/new)
-  - Name: `de.jena.udp-models`
+  - Name: `de.jena.upd-models`
   - DO NOT!!! use any DEFAULTS like README or license
   
 ## Sonarcloud
@@ -14,11 +14,11 @@ The Maven group-id is defaulted to **de.jena.udp-models** in *cnf/build.bnd* usi
   - do the [Sonar Configuration](https://sonarcloud.io/organizations/geckoprojects-org/projects)
   - press `+`_(upper right)_
   - Analyze new project
-  - check `de.jena.udp-models` and `SetUp`
+  - check `de.jena.upd-models` and `SetUp`
   - Select `with a GitHub Action`
   - Copy the `SONAR_TOKEN` to notepad
   - NOT!!!! follow the description .about `github/workflows/build.yml`. _this still [exists](../blob/main/.github/workflows/sonar.yml) in this template._
-  - GitHub -> Project-Settings -> Secrets -> [New Repository Secrets](Link: https://github.com/geckoprojects-org/de.jena.udp-models/settings/secrets/actions/new)
+  - GitHub -> Project-Settings -> Secrets -> [New Repository Secrets](Link: https://github.com/geckoprojects-org/de.jena.upd-models/settings/secrets/actions/new)
     - add `SONAR_TOKEN`
 
 ## Gradle init
@@ -37,7 +37,7 @@ git init
 git add .
 git commit -m "initial commit"
 git branch -M main
-git remote add origin git@github.com:geckoprojects-org/de.jena.udp-models.git
+git remote add origin git@github.com:geckoprojects-org/de.jena.upd-models.git
 git push -u origin main
 git checkout -b snapshot
 git push --set-upstream origin snapshot
@@ -45,7 +45,7 @@ git checkout -b "initial"
 ```
 
 ## GitHub Branch-Protection
-- Project -> Settings  -> Branches [add rule](https://github.com/geckoprojects-org/de.jena.udp-models/settings/branch_protection_rules/new)
+- Project -> Settings  -> Branches [add rule](https://github.com/geckoprojects-org/de.jena.upd-models/settings/branch_protection_rules/new)
   - Branch name pattern: `[ms][an][ia][np]*` *(ugly but works, protects 'main*' and 'snap*' by charachter )*
   - Require pull request reviews before merging
     - 1 reviewer
@@ -60,8 +60,8 @@ git checkout -b "initial"
 ## Jenkins
 - wait up to 15 minutes for the auto-import
 - [Jenkins Mainpage](https://devel.data-in-motion.biz/jenkins/)
-- [Jenkins GitHub-Group](https://devel.data-in-motion.biz/jenkins/job/GH/) should show `de.jena.udp-models`
-- [Jenkins de.jena.udp-models branches](https://devel.data-in-motion.biz/jenkins/job/GH/job/de.jena.udp-models/)
+- [Jenkins GitHub-Group](https://devel.data-in-motion.biz/jenkins/job/GH/) should show `de.jena.upd-models`
+- [Jenkins de.jena.upd-models branches](https://devel.data-in-motion.biz/jenkins/job/GH/job/de.jena.upd-models/)
 
 ## License check
 

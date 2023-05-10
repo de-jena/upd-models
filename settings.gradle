@@ -13,7 +13,7 @@ pluginManagement {
     }
     mavenCentral()
     gradlePluginPortal()
-    rootProject.name="de.jena.udp-models"
+    rootProject.name="de.jena.upd-models"
   }
 }
 plugins {
