@@ -3,3 +3,12 @@ org.geckoprojects.emf:org.gecko.emf.osgi.extender:5.0.0-SNAPSHOT
 
 org.osgi:org.osgi.service.condition:1.0.0
 
+com.fasterxml.jackson.core:jackson-annotations:${jackson.version}
+com.fasterxml.jackson.core:jackson-core:${jackson.version}
+com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${jackson.version}
+com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:${jackson.version}
+com.fasterxml.jackson.core:jackson-databind:${jackson.version}
+com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:${jackson.version}
+com.fasterxml.jackson.module:jackson-module-jaxb-annotations:${jackson.version}
+com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:${jackson.version}
+com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:${jackson.version}

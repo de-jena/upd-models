@@ -4,6 +4,8 @@
 
 github-project: de.jena.upd-models
 base-version: 1.0.0
+sensinact.version: 0.0.2-SNAPSHOT
+jackson.version: 2.14.0
 
 # Maven Central Group-Id
 # For Geckoprojects the groupid must start with org.geckoprojects
