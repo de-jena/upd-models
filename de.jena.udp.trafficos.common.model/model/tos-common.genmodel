@@ -27,26 +27,25 @@
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleModeType/WEEKEND"/>
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleModeType/WORKING_DAY"/>
     </genEnums>
+    <genClasses ecoreClass="tos-common.ecore#//IdElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//IdElement/id"/>
+    </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//IdNameElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//IdNameElement/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//IdNameElement/name"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//AbstractDataEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/timestamp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/index"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//AbstractTimeTableEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/index"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/begin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/index"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//Localizable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-common.ecore#//Localizable/location"/>
     </genClasses>
-    <genClasses ecoreClass="tos-common.ecore#//Location">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//Location/id"/>
-    </genClasses>
+    <genClasses ecoreClass="tos-common.ecore#//Location"/>
     <genClasses ecoreClass="tos-common.ecore#//NetworkLocation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//NetworkLocation/ip4Address"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//NetworkLocation/ip6Address"/>
