@@ -49,6 +49,9 @@ public class SensinactGenericMessageUtil {
 		if (feature == null) {
 			return false;
 		}
+		if(feature.isMany() && "org.eclipse.emf.ecore.util.EDataTypeUniqueEList".equals(type.getName())) {
+			return true;
+		}
 		return feature.getEType().getInstanceClass() != null && 
 				(feature.getEType().getInstanceClass().equals(type) || 
 						box(feature.getEType().getInstanceClass()).equals(type) ||

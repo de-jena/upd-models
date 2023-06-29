@@ -60,5 +60,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generic_message.ecore#//PointValueUpdate/oldValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generic_message.ecore#//PointValueUpdate/newValue"/>
     </genClasses>
+    <genClasses ecoreClass="generic_message.ecore#//ListValueUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generic_message.ecore#//ListValueUpdate/oldValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute generic_message.ecore#//ListValueUpdate/newValue"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
