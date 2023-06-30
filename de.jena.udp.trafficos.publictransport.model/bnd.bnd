@@ -20,4 +20,4 @@
 # Bundle Annotations		
 -includeresource.model: model=model
 
-Bundle-Version: 2.1.0.SNAPSHOT
+Bundle-Version: ${base-version}.SNAPSHOT
