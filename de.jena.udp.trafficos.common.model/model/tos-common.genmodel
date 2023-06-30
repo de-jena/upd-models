@@ -35,12 +35,10 @@
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//AbstractDataEntry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/timestamp"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/index"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//AbstractTimeTableEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/begin"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/end"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/beginDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/endDate"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//Localizable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-common.ecore#//Localizable/location"/>
