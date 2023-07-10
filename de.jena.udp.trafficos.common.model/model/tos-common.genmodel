@@ -22,11 +22,20 @@
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//DirectionType/STRAIGHT_RIGHT"/>
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//DirectionType/LEFT_RIGHT"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-common.ecore#//ScheduleModeType">
-      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleModeType/EVERY_DAY"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleModeType/WEEKEND"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleModeType/WORKING_DAY"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-common.ecore#//ScheduleFrequencyType">
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/EVERY_DAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/WEEKEND"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/WORKING_DAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/SCHOOL_YEAR"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/PUBLIC_HOLIDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/SATURDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/SUNDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/OTHER"/>
     </genEnums>
+    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalTime" create="return LocalTime.parse(it, DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"
+        convert="return ((LocalTime) it).format(DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"/>
+    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalDate" create="return LocalDate.parse(it, DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"
+        convert="return ((LocalDate) it).format(DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"/>
     <genClasses ecoreClass="tos-common.ecore#//IdElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//IdElement/id"/>
     </genClasses>
@@ -36,9 +45,9 @@
     <genClasses ecoreClass="tos-common.ecore#//AbstractDataEntry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractDataEntry/timestamp"/>
     </genClasses>
-    <genClasses ecoreClass="tos-common.ecore#//AbstractTimeTableEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/beginDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimeTableEntry/endDate"/>
+    <genClasses ecoreClass="tos-common.ecore#//AbstractTimetableEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimetableEntry/beginDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//AbstractTimetableEntry/endDate"/>
     </genClasses>
     <genClasses ecoreClass="tos-common.ecore#//Localizable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-common.ecore#//Localizable/location"/>

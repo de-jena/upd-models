@@ -9,9 +9,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractDataEntry" eSuperTypes="#//IdElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractTimeTableEntry" eSuperTypes="#//IdElement">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractTimetableEntry" eSuperTypes="#//IdElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="beginDate" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -87,9 +87,16 @@
     <eLiterals name="STRAIGHT_RIGHT" value="6"/>
     <eLiterals name="LEFT_RIGHT" value="7"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ScheduleModeType">
+  <eClassifiers xsi:type="ecore:EEnum" name="ScheduleFrequencyType">
     <eLiterals name="EVERY_DAY"/>
     <eLiterals name="WEEKEND" value="1"/>
     <eLiterals name="WORKING_DAY" value="2"/>
+    <eLiterals name="SCHOOL_YEAR" value="3"/>
+    <eLiterals name="PUBLIC_HOLIDAY" value="4"/>
+    <eLiterals name="SATURDAY" value="5"/>
+    <eLiterals name="SUNDAY" value="6"/>
+    <eLiterals name="OTHER" value="7"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ELocalTime" instanceClassName="java.time.LocalTime"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ELocalDate" instanceClassName="java.time.LocalDate"/>
 </ecore:EPackage>
