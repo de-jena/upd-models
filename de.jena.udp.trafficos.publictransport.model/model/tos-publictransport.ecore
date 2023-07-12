@@ -125,16 +125,54 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTTripUpdate" eSuperTypes="#//PTUpdateValue">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripRef" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScheduleId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stops" upperBound="-1"
-        eType="#//PTStop" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timetableDelay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Delay in seconds. Early times are shown as negative values."/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationState" eType="#//PTLocationStateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The run number (Kurs-Nummer) the trip is operated. (according to IBIS model)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patternNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The pattern number (Linienfahrweg-Nummer) the trip is operated (according to IBIS model)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDestinationNumber"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The path destination number (RoutenZiel-Nummer) the trip is operated (according to IBIS model)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopUpdate" upperBound="-1"
+        eType="#//PTStopUpdate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTStopUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedDepartureTime"
+        eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceFromNextStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTScheduleUpdate" eSuperTypes="#//PTUpdateValue">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

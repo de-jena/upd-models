@@ -148,10 +148,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopRequestedUpdate/stopRequested"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTTripUpdate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/tripRef"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PTTripUpdate/stops"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/refScheduleId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/timetableDelay"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/locationState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/runNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/patternNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/pathDestinationNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTripUpdate/currentStopIndex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PTTripUpdate/stopUpdate"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTStopUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/refStopId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/expectedArrivalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/expectedDepartureTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/recordedArrivalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/distanceFromNextStop"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTScheduleUpdate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PTScheduleUpdate/updatedSchedule"/>
