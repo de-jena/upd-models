@@ -1,53 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.upd.trafficos.trafficlight.model/src"
-    modelPluginID="de.jena.upd.trafficos.trafficlight.model" modelName="tos-trafficlight"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
-    usedGenPackages="../../de.jena.udp.trafficos.common.model/model/tos-common.genmodel#//common"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.dim.trafficos.trafficlight.model/src" modelPluginID="de.dim.trafficos.trafficlight.model"
+    modelName="tos-trafficlight" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" usedGenPackages="../../de.dim.trafficos.common.model/model/tos-common.genmodel#//common"
     operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>tos-trafficlight.ecore</foreignModel>
-  <genPackages prefix="TOSTrafficLight" basePackage="de.jena.udp.model.trafficos"
+  <genPackages prefix="TOSTrafficLight" basePackage="de.dim.trafficos.trafficlight.model"
       resource="XMI" disposableProviderFactory="true" literalsInterface="false" ecorePackage="tos-trafficlight.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-trafficlight.ecore#//TLModuleType">
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//TLModuleType/LML"/>
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//TLModuleType/FDL"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-trafficlight.ecore#//SignalValueType">
-      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalValueType/RED"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalValueType/AMBER"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalValueType/GREEN"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalValueType/SIGNAL_IS_COMING"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalValueType/ORIENTATION_SOUND"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-trafficlight.ecore#//SignalType">
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/RED_AMBER_GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/RED_GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/JUMPING"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/SIGNAL_IS_COMING"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/ORIENTATION_SOUND"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BLINKING"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BUTTON"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BLIND_BUTTON"/>
     </genEnums>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLModule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLModule/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLModule/address"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLModule/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLModule/signalTransmitter"/>
-    </genClasses>
-    <genClasses ecoreClass="tos-trafficlight.ecore#//TLSignalTransmitter">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLSignalTransmitter/signalGroup"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLSignalTransmitter/lightSignal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLModule/moduleType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLModule/signals"/>
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLSignalGroup">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalGroup/id"/>
     </genClasses>
-    <genClasses ecoreClass="tos-trafficlight.ecore#//LightSignal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//LightSignal/blinking"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//LightSignal/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//LightSignal/on"/>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//TLSignal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignal/channel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLSignal/signalGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignal/signalType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignal/positions"/>
     </genClasses>
-    <genClasses ecoreClass="tos-trafficlight.ecore#//TLUpdate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLUpdate/address"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLUpdate/channel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLUpdate/timestamp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLUpdate/states"/>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//TLSignalState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLSignalState/signalGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/signalType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/values"/>
     </genClasses>
-    <genClasses ecoreClass="tos-trafficlight.ecore#//TLState">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLState/channel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLState/color"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLState/on"/>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//IntersectionSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IntersectionSystem/intersectionId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IntersectionSystem/intersectionName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//IntersectionSystem/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//IntersectionSystem/signalGroups"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
