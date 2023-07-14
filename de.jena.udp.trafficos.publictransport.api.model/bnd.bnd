@@ -1,16 +1,17 @@
 -buildpath: \
-	org.osgi.service.condition
+	org.osgi.service.condition,\
+	de.jena.udp.trafficos.common.model;version=latest
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
 -library: enable-emf
 
 # The code generation takes a bit of time and makes the build a bit slower.
 # It might be a good idea to put comments around it, when you don't need it
-#-generate:\
-#	model/tos-intersectionsystem.genmodel;\
-#		generate=geckoEMF;\
-#		genmodel=model/tos-intersectionsystem.genmodel;\
-#		output=src
+-generate:\
+		model/tos-publictransport-api.genmodel;\
+		generate=geckoEMF;\
+		genmodel=model/tos-publictransport-api.genmodel;\
+		output=src
 # Add this attribute to find some logging information
 #		logfile=test.log;\
 
@@ -19,5 +20,5 @@
 # Bundle Annotations		
 -includeresource.model: model=model
 
-Bundle-Version: ${base-version}.SNAPSHOT
+Bundle-Version: 1.0.0.SNAPSHOT
 

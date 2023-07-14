@@ -13,7 +13,7 @@
         eType="#//Phase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="phaseGroup" upperBound="-1"
         eType="#//PhaseGroup" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="timeTable" eType="#//TimeTable"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeTable" eType="#//Timetable"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
         eType="ecore:EClass ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//Output"
@@ -140,12 +140,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="phase" lowerBound="1" upperBound="-1"
         eType="#//Phase"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeTable" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Timetable" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" upperBound="-1"
-        eType="#//TimeTableEntry" containment="true"/>
+        eType="#//TimetableEntry" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultMode" eType="#//TimeTableModeType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeTableEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//AbstractTimeTableEntry">
+  <eClassifiers xsi:type="ecore:EClass" name="TimetableEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//AbstractTimetableEntry">
     <eStructuralFeatures xsi:type="ecore:EReference" name="program" lowerBound="1"
         eType="#//Program"/>
   </eClassifiers>

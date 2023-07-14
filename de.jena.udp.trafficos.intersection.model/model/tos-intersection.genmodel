@@ -133,12 +133,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-intersection.ecore#//PhaseGroup/penalty"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//PhaseGroup/phase"/>
     </genClasses>
-    <genClasses ecoreClass="tos-intersection.ecore#//TimeTable">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//TimeTable/entry"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-intersection.ecore#//TimeTable/defaultMode"/>
+    <genClasses ecoreClass="tos-intersection.ecore#//Timetable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//Timetable/entry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-intersection.ecore#//Timetable/defaultMode"/>
     </genClasses>
-    <genClasses ecoreClass="tos-intersection.ecore#//TimeTableEntry">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//TimeTableEntry/program"/>
+    <genClasses ecoreClass="tos-intersection.ecore#//TimetableEntry">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//TimetableEntry/program"/>
     </genClasses>
     <genClasses ecoreClass="tos-intersection.ecore#//SignalTable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-intersection.ecore#//SignalTable/cacheDataEntry"/>

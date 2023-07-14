@@ -5,113 +5,248 @@
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportConfiguration" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="publicTransport" upperBound="-1"
-        eType="#//PublicTransportLine" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PTVehicle" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportLine" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PublicTransportType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="timeTable" upperBound="-1"
-        eType="#//PublicTransportTimeTable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PTRoute" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTRouteType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportTimeTable" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entry" upperBound="-1"
-        eType="#//PublicTransportTimeTableEntry" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EEnum ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ScheduleModeType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportTimeTableEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//AbstractTimeTableEntry">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="firstStation" lowerBound="1"
-        eType="#//PublicTransportStation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lastStation" lowerBound="1"
-        eType="#//PublicTransportStation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stops" upperBound="-1"
-        eType="#//PublicTransportStop" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportStop">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="station" eType="#//PublicTransportStation"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedArrivalTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+  <eClassifiers xsi:type="ecore:EClass" name="PTTimetableEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is just a single entry in a timetable, e.g. the single stop at a single time for a single line. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScheduleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduledArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Minute of the day"/>
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduledDepartureTime"
+        eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pickUpType" eType="#//PTPickUpDropOffType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dropOffType" eType="#//PTPickUpDropOffType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dwellTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In minutes."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportStation" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PTStop" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DHID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is a unique identifier for the stop, made up by a combination of the municipality code and the actual stop id."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//Position"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PublicTransportDoorSideType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportDataEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//AbstractDataEntry">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValue" upperBound="-1"
-        eType="#//PublicTransportDataValue" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportDataValue">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PublicTransportDataValueType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lineRef" eType="ecore:EClass ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//PublicTransportDataValueObject"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeTableEntryRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+  <eClassifiers xsi:type="ecore:EClass" name="PTSchedule" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refRouteId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refRouteNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripDirection" eType="#//PTTripDirectionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalDate">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This should reference to the index of the TimeTableEntry this value is referring to. This because a line can have multiple physical vehicles running around, so we should refer to the timetable. E.g. Tram line 2 has schedule departures at 7:03, 7:13, 7:23, ect so we should be able to identify to which trip the data is referring to."/>
+        <details key="documentation" value="This is the date from when the vehicle is expected to run the trip."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the date till when the vehicle is expected to run this trip."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyDays" upperBound="-1"
+        eType="#//PTFrequencyType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="includedDate" upperBound="-1"
+        eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="There might be dates which should not be included based on the frequency date but that they are as exceptions."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="excludedDate" upperBound="-1"
+        eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="There might be dates which should be included based on the frequency date but that they are not, as exceptions."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportDataValueObject" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdNameElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportTelegram" eSuperTypes="#//PublicTransportDataValueObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportPosition" eSuperTypes="#//PublicTransportDataValueObject">
+  <eClassifiers xsi:type="ecore:EClass" name="PTUpdate" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//AbstractDataEntry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refVehicleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTUpdateValueType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//PTUpdateValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The source of this data update (Ibis, VDV, etc.). Might be useful for further filtering in the API."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTUpdateValue" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PTPositionUpdate" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//Position"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportDoorChange" eSuperTypes="#//PublicTransportPosition">
+  <eClassifiers xsi:type="ecore:EClass" name="PTDoorChangeUpdate" eSuperTypes="#//PTPositionUpdate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PublicTransportDoorSideType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PublicTransportDoorChangeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTDoorSideType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTDoorChangeType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportLocMsg" eSuperTypes="#//PublicTransportDataValueObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineNum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripNum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeNum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="travelNum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kilometer" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actualTime" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedTime" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gps" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="odo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="door" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportDoorCount" eSuperTypes="#//PublicTransportDataValueObject">
+  <eClassifiers xsi:type="ecore:EClass" name="PTDoorCountUpdate" abstract="true" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PublicTransportDoorSideType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PublicTransportDoorCountingType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTDoorSideType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTDoorCountingType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="in" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="out" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportStopRequested" eSuperTypes="#//PublicTransportDataValueObject">
+  <eClassifiers xsi:type="ecore:EClass" name="PTStopRequestedUpdate" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PublicTransportType">
+  <eClassifiers xsi:type="ecore:EClass" name="PTTripUpdate" eSuperTypes="#//PTUpdateValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScheduleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timetableDelay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Delay in seconds. Early times are shown as negative values."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationState" eType="#//PTLocationStateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The run number (Kurs-Nummer) the trip is operated. (according to IBIS model)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patternNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The pattern number (Linienfahrweg-Nummer) the trip is operated (according to IBIS model)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDestinationNumber"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The path destination number (RoutenZiel-Nummer) the trip is operated (according to IBIS model)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopUpdate" upperBound="-1"
+        eType="#//PTStopUpdate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTStopUpdate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedDepartureTime"
+        eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This should be just a time, with hours and minutes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceFromNextStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTScheduleUpdate" eSuperTypes="#//PTUpdateValue">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This update value should contain changes to a nominal timetable entry."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="updatedSchedule" eType="#//PTSchedule"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTType">
     <eLiterals name="TRAM"/>
     <eLiterals name="CITY_BUS" value="1"/>
     <eLiterals name="REGIONAL_BUS" value="2"/>
-    <eLiterals name="OTHER" value="3"/>
+    <eLiterals name="E_BUS" value="3"/>
+    <eLiterals name="SCHOOL_BUS" value="4"/>
+    <eLiterals name="NIGHT_BUS" value="4"/>
+    <eLiterals name="OTHER" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PublicTransportDataValueType">
+  <eClassifiers xsi:type="ecore:EEnum" name="PTRouteType">
+    <eLiterals name="TRAM">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="SUBWAY" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Subway, metro. Any underground rail system within a metropolitan area."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="RAIL" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Rail. Used for intercity or long-distance travel."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="BUS" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bus. Used for short- and long-distance bus routes."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="FERRY" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ferry. Used for short- and long-distance boat service."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="CABLE_TRAM" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="AERIAL_LIFT" value="6">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="FUNICULAR" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Funicular. Any rail system designed for steep inclines."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="TROLLEY_BUS" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Trolleybus. Electric buses that draw power from overhead wires using poles."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="MONORAIL" value="12">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Monorail. Railway in which the track consists of a single rail or a beam."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="OTHER" value="100">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTUpdateValueType">
     <eLiterals name="UNKNOWN"/>
     <eLiterals name="DOOR_CHANGE" value="1"/>
     <eLiterals name="TELEGRAM" value="2"/>
@@ -119,12 +254,14 @@
     <eLiterals name="LOCATION_MESSAGE" value="4"/>
     <eLiterals name="DOOR_COUNT" value="5"/>
     <eLiterals name="STOP_REQUESTED" value="6"/>
+    <eLiterals name="TRIP_DATA" value="7"/>
+    <eLiterals name="TIMETABLE" value="8"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PublicTransportDoorChangeType">
+  <eClassifiers xsi:type="ecore:EEnum" name="PTDoorChangeType">
     <eLiterals name="DOOR_CLOSE"/>
     <eLiterals name="DOOR_OPEN" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PublicTransportDoorCountingType">
+  <eClassifiers xsi:type="ecore:EEnum" name="PTDoorCountingType">
     <eLiterals name="ADULT"/>
     <eLiterals name="CHILD" value="1"/>
     <eLiterals name="BIKE" value="2"/>
@@ -133,8 +270,44 @@
     <eLiterals name="UNIDENTIFIED" value="5"/>
     <eLiterals name="OTHER" value="6"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PublicTransportDoorSideType">
+  <eClassifiers xsi:type="ecore:EEnum" name="PTDoorSideType">
     <eLiterals name="RIGHT"/>
     <eLiterals name="LEFT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTLocationStateType">
+    <eLiterals name="AFTER_STOP"/>
+    <eLiterals name="AT_STOP" value="1"/>
+    <eLiterals name="BEFORE_STOP" value="2"/>
+    <eLiterals name="BETWEEN_STOP" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTPickUpDropOffType">
+    <eLiterals name="REGULARLY_SCHEDULED"/>
+    <eLiterals name="NOT_AVAILABLE" value="1"/>
+    <eLiterals name="PHONE_TO_ARRANGE" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Must phone the agency responsible for the trip to arrange pickup/drop-off."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="COORDINATE_WITH_DRIVER" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Must coordinate with the driver to arrange pickup/drop-off."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTTripDirectionType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="As defined in the GTFS specifications (https://developers.google.com/transit/gtfs/reference#tripstxt)"/>
+    </eAnnotations>
+    <eLiterals name="OUTBOUND"/>
+    <eLiterals name="INBOUND" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTFrequencyType">
+    <eLiterals name="MONDAY"/>
+    <eLiterals name="TUESDAY" value="1"/>
+    <eLiterals name="WEDNESDAY" value="2"/>
+    <eLiterals name="THURSDAY" value="3"/>
+    <eLiterals name="FRIDAY" value="4"/>
+    <eLiterals name="SATURDAY" value="5"/>
+    <eLiterals name="SUNDAY" value="6"/>
   </eClassifiers>
 </ecore:EPackage>

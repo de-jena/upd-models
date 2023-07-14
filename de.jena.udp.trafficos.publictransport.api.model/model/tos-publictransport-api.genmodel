@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.ibis.rest.model/src" editDirectory="/de.jena.ibis.rest.model.edit/src"
+    editorDirectory="/de.jena.ibis.rest.model.editor/src" modelPluginID="de.jena.ibis.rest.model"
+    modelName="tos-publictransport-api" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" editPluginID="de.jena.ibis.rest.model.edit" editorPluginID="de.jena.ibis.rest.model.editor"
+    usedGenPackages="../../de.jena.udp.trafficos.common.model/model/tos-common.genmodel#//common"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>tos-publictransport-api.ecore</foreignModel>
+  <genPackages prefix="TOSPublicTransportApi" basePackage="de.jena.udp.model.trafficos"
+      disposableProviderFactory="true" ecorePackage="tos-publictransport-api.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//DeviceType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/E_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/TRAM"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/TRAIN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//LocationStateType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/AFTER_STOP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/AT_STOP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/BEFORE_STOP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/BETWEEN_STOP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//RouteDirectionType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDirectionType/FORWARD"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDirectionType/BACKWARD"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDirectionType/CLOCKWISE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDirectionType/COUNTERCLOCKWISE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDirectionType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//ScheduleFrequencyDayType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/MONDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/TUESDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/WEDNESDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/THURSDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/FRIDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/SATURDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleFrequencyDayType/SUNDAY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//ScheduleEntryType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleEntryType/START"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleEntryType/END"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ScheduleEntryType/TRANSIT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//PickUpDropOffType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/REGULARLY_SCHEDULED"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/NOT_AVAILABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/PHONE_TO_ARRANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/COORDINATE_WITH_DRIVER"/>
+    </genEnums>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//Response">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Response/data"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineDevice/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineDevice/type"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//Schedule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/scheduleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/refRouteId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/refRouteNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/routeDirection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Schedule/scheduleEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/includedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/excludedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/frequencyDays"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//ScheduleEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/refScheduleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/entryIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/arrivalScheduled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/departureScheduled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/dwellTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/entryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/pickUpType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/dropOffType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//ScheduleEntry/stopRef"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//StopInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopInformation/stopId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopInformation/DHID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopInformation/stopName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopInformation/distanceToNextStop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//StopInformation/position"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Position/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Position/longitude"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//Update">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Update/refVehicleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Update/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//PositionUpdate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//PositionUpdate/position"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//TripUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/locationState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/scheduleDelay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/currentStopIndex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//TripUpdate/currentSchedule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//TripUpdate/stopUpdate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/runNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/patternNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//TripUpdate/pathDestinationNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//StopUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/refStopId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/refScheduleEntryIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/arrivalExpected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/departureExpected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/recordedArrivalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/distanceFromNextStop"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
