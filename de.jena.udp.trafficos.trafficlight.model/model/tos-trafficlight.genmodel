@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.dim.trafficos.trafficlight.model/src" modelPluginID="de.dim.trafficos.trafficlight.model"
     modelName="tos-trafficlight" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
-    copyrightFields="false" usedGenPackages="../../de.dim.trafficos.common.model/model/tos-common.genmodel#//common"
+    copyrightFields="false" usedGenPackages="../../de.jena.udp.trafficos.common.model/model/tos-common.genmodel#//common"
     operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>tos-trafficlight.ecore</foreignModel>
   <genPackages prefix="TOSTrafficLight" basePackage="de.dim.trafficos.trafficlight.model"
