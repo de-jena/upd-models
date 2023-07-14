@@ -6,7 +6,7 @@
     copyrightFields="false" usedGenPackages="../../de.jena.udp.trafficos.common.model/model/tos-common.genmodel#//common"
     operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>tos-trafficlight.ecore</foreignModel>
-  <genPackages prefix="TOSTrafficLight" basePackage="de.dim.trafficos.trafficlight.model"
+  <genPackages prefix="TOSTrafficLight" basePackage="de.jena.udp.model.trafficos"
       resource="XMI" disposableProviderFactory="true" literalsInterface="false" ecorePackage="tos-trafficlight.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-trafficlight.ecore#//TLModuleType">
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//TLModuleType/LML"/>
