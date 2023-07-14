@@ -110,17 +110,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStop/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PTStop/position"/>
     </genClasses>
-    <genClasses ecoreClass="tos-publictransport.ecore#//PTVehicleSchedule">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/scheduleId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/refRouteId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/refRouteNumber"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/refVehicleId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/tripDirection"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/startDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/endDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/frequencyDays"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/includedDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleSchedule/excludedDate"/>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTSchedule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/scheduleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/refRouteId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/refRouteNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/tripDirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/frequencyDays"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/includedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTSchedule/excludedDate"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTUpdate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTUpdate/refVehicleId"/>
