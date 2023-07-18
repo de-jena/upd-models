@@ -13,8 +13,8 @@ jackson.version: 2.14.0
 # For Geckoprojects the groupid must start with org.geckoprojects
 -groupid: de.jena
 
-javac.source: 17
-javac.target: 17
+javac.source: 11
+javac.target: 11
 
 -require-bnd "(version>=6.4.0)"
 
