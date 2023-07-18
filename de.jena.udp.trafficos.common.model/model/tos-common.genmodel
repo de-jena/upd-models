@@ -32,10 +32,10 @@
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/SUNDAY"/>
       <genEnumLiterals ecoreEnumLiteral="tos-common.ecore#//ScheduleFrequencyType/OTHER"/>
     </genEnums>
-    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalTime" create="return LocalTime.parse(it, DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"
-        convert="return ((LocalTime) it).format(DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"/>
-    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalDate" create="return LocalDate.parse(it, DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"
-        convert="return ((LocalDate) it).format(DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"/>
+    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalTime" create="return LocalTime.parse(it, java.time.format.DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"
+        convert="return ((LocalTime) it).format(java.time.format.DateTimeFormatter.ofPattern(&quot;HH:mm&quot;));"/>
+    <genDataTypes ecoreDataType="tos-common.ecore#//ELocalDate" create="return LocalDate.parse(it, java.time.format.DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"
+        convert="return ((LocalDate) it).format(java.time.format.DateTimeFormatter.ofPattern(&quot;yyyyMMdd&quot;));"/>
     <genClasses ecoreClass="tos-common.ecore#//IdElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-common.ecore#//IdElement/id"/>
     </genClasses>
