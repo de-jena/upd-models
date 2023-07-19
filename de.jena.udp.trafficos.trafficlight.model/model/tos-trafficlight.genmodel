@@ -45,11 +45,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/state"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLSignalState/values"/>
     </genClasses>
-    <genClasses ecoreClass="tos-trafficlight.ecore#//IntersectionSystem">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IntersectionSystem/intersectionId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IntersectionSystem/intersectionName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//IntersectionSystem/modules"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//IntersectionSystem/signalGroups"/>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//TLConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLConfiguration/intersectionId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLConfiguration/intersectionName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/signalGroups"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

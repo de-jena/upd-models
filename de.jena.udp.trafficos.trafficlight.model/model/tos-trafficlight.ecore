@@ -53,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
         lowerBound="1" upperBound="3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntersectionSystem">
+  <eClassifiers xsi:type="ecore:EClass" name="TLConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
