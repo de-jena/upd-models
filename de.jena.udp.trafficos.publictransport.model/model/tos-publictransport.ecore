@@ -37,6 +37,18 @@
         <details key="documentation" value="This should be just a time, with hours and minutes."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalDayAfterScheduleStart"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Some time table entries can reference to times which are a day (or two) after the trip is started. So this attribute will take that into account."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDayAfterScheduleStart"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Some time table entries can reference to times which are a day (or two) after the trip is started. So this attribute will take that into account."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pickUpType" eType="#//PTPickUpDropOffType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dropOffType" eType="#//PTPickUpDropOffType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dwellTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">

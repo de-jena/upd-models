@@ -100,6 +100,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/entryIndex"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/scheduledArrivalTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/scheduledDepartureTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/arrivalDayAfterScheduleStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/departureDayAfterScheduleStart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/pickUpType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/dropOffType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTTimetableEntry/dwellTime"/>

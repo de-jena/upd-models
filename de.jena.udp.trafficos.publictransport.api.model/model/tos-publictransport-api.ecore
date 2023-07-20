@@ -32,12 +32,25 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalScheduled" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureScheduled" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalDayAfterScheduleStart"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Some time table entries can reference to times which are a day (or two) after the trip is started. So this attribute will take that into account."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDayAfterScheduleStart"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Some time table entries can reference to times which are a day (or two) after the trip is started. So this attribute will take that into account."/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dwellTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryType" eType="#//ScheduleEntryType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pickUpType" eType="#//PickUpDropOffType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dropOffType" eType="#//PickUpDropOffType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stopRef" eType="#//StopInformation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refStop" eType="#//StopInformation"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StopInformation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopId" lowerBound="1"

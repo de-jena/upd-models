@@ -73,11 +73,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/entryIndex"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/arrivalScheduled"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/departureScheduled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/arrivalDayAfterScheduleStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/departureDayAfterScheduleStart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/dwellTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/entryType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/pickUpType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/dropOffType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//ScheduleEntry/stopRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//ScheduleEntry/refStop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//ScheduleEntry/refStopId"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//StopInformation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopInformation/stopId"/>
