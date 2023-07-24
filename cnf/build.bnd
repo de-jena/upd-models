@@ -7,8 +7,6 @@ base-version: 1.1.0
 sensinact.version: 0.0.2-SNAPSHOT
 jackson.version: 2.14.0
 
--snapshot: ${tstamp}-SNAPSHOT
-
 javac.source: 11
 javac.target: 11
 
