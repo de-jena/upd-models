@@ -1,17 +1,14 @@
 -library: \
-	geckoEMF
+	geckoEMF,\
+	geckoDIMC
 
-
-github-project: de.jena.upd-models
+-groupid: de.jena
+github-project: upd-models
 base-version: 1.1.0
 sensinact.version: 0.0.2-SNAPSHOT
 jackson.version: 2.14.0
 
 -snapshot: ${tstamp}-SNAPSHOT
-
-# Maven Central Group-Id
-# For Geckoprojects the groupid must start with org.geckoprojects
--groupid: de.jena
 
 javac.source: 11
 javac.target: 11
