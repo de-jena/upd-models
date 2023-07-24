@@ -44,7 +44,7 @@ mvn-base-version: ${versionmask;===s;${project-version}}
     org.osgi.service.metatype.annotations
 
 # Activate baselining per default to de-activate set 'dimBaselining: false'
-dimcBaselining: true
+dimcBaselining: false
 
 #DIMC Nexus release repository    
 -plugin.dimrelease: \
