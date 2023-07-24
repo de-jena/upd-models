@@ -43,9 +43,6 @@ mvn-base-version: ${versionmask;===s;${project-version}}
     org.osgi.service.component.annotations,\
     org.osgi.service.metatype.annotations
 
-# Activate baselining per default to de-activate set 'dimBaselining: false'
-dimcBaselining: false
-
 #DIMC Nexus release repository    
 -plugin.dimrelease: \
 	aQute.bnd.repository.maven.provider.MavenBndRepository;\
@@ -85,8 +82,6 @@ releaseNotNeeded: \
 # If the 'release.dir property is set , we make a release release, otherwise we make only a snapshot release
 # As long as we are on Jenkins, we also release to Maven Central
 -include: \
-	${if;${dimcBaselining};\
-		${.}/baseline.bnd},\
 	${if;${def;release.dir};\
 		${.}/releng/release.bnd;\
 		${.}/releng/snapshot.bnd\
