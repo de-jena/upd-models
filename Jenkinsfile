@@ -38,7 +38,7 @@ pipeline  {
             steps  {
                 echo "I am building on ${env.JOB_NAME}"
                 sh "./gradlew build release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-                sh "mkdir -p $JENKINS_HOME/repo.dim/snapshot/de.jena.upd-models"
+                sh "mkdir -p $JENKINS_HOME/repo.dim/snapshot/de.jena.upd-model"
                 sh "rm -rf $JENKINS_HOME/repo.dim/snapshot/de.jena.upd-model/*"
                 sh "cp -r cnf/release/* $JENKINS_HOME/repo.dim/snapshot/de.jena.upd-model"
             }
