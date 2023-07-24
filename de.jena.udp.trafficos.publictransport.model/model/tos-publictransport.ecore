@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="publictransport" nsURI="http://jena.de/udp/trafficos/publictransport/1.0"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="publictransport" nsURI="http://jena.de/udp/trafficos/publictransport/1.1.1"
     nsPrefix="publictransport">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="Version">
+    <details key="value" value="1.1.1"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="PTVehicle" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTType"/>

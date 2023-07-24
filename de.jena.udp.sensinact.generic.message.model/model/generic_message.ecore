@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="message" nsURI="https://de.jena/udp/sensinact/generic/message/1.0"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="message" nsURI="https://de.jena/udp/sensinact/generic/message/1.1.1"
     nsPrefix="message">
   <eAnnotations source="Version">
-    <details key="value" value="1.0"/>
+    <details key="value" value="1.1.1"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="UpdateMessage" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="#//EInstant"/>
