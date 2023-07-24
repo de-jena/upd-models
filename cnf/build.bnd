@@ -1,6 +1,5 @@
 -library: \
-	geckoEMF,\
-	geckoDIMC
+	geckoEMF
 
 -groupid: de.jena
 github-project: upd-models
