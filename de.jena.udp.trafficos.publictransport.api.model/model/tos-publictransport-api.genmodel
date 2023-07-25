@@ -10,11 +10,11 @@
   <foreignModel>tos-publictransport-api.ecore</foreignModel>
   <genPackages prefix="TOSPublicTransportApi" basePackage="de.jena.udp.model.trafficos"
       disposableProviderFactory="true" ecorePackage="tos-publictransport-api.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//DeviceType">
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/BUS"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/E_BUS"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/TRAM"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DeviceType/TRAIN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//VehicleType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/E_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/TRAM"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/TRAIN"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//LocationStateType">
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/AFTER_STOP"/>
@@ -52,9 +52,9 @@
     <genClasses ecoreClass="tos-publictransport-api.ecore#//Response">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Response/data"/>
     </genClasses>
-    <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineDevice">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineDevice/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineDevice/type"/>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineVehicle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineVehicle/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineVehicle/type"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//Schedule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Schedule/scheduleId"/>

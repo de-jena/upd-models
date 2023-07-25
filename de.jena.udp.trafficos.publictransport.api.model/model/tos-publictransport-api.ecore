@@ -9,9 +9,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OnlineDevice">
+  <eClassifiers xsi:type="ecore:EClass" name="OnlineVehicle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DeviceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//VehicleType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Schedule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleId" lowerBound="1"
@@ -108,7 +108,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceFromNextStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DeviceType">
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
     <eLiterals name="BUS"/>
     <eLiterals name="E_BUS" value="1"/>
     <eLiterals name="TRAM" value="2"/>
