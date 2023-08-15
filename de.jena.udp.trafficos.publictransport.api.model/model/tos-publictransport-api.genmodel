@@ -51,6 +51,7 @@
     </genEnums>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//Response">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Response/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Response/message"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineVehicle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineVehicle/id"/>
