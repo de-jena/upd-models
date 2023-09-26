@@ -54,10 +54,6 @@
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorCountingType/UNIDENTIFIED"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorCountingType/OTHER"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTDoorSideType">
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorSideType/RIGHT"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorSideType/LEFT"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTLocationStateType">
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTLocationStateType/AFTER_STOP"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTLocationStateType/AT_STOP"/>
@@ -82,6 +78,31 @@
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTFrequencyType/FRIDAY"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTFrequencyType/SATURDAY"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTFrequencyType/SUNDAY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTRouteDeviationType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTRouteDeviationType/ON_ROUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTRouteDeviationType/OFF_ROUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTRouteDeviationType/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTDoorOpenStateType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorOpenStateType/DOORS_OPEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorOpenStateType/ALL_DOORS_CLOSED"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorOpenStateType/SINGLE_DOOR_OPEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorOpenStateType/SINGLE_DOOR_CLOSED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTExitSideType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTExitSideType/BOTH"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTExitSideType/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTExitSideType/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTExitSideType/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTTripStateType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/EMPTY_RUN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/ON_TRIP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/OFF_TRIP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/TRIP_BREAK"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/OFF_DUTY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTTripStateType/UNKNOWN"/>
     </genEnums>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTVehicle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicle/type"/>
@@ -175,6 +196,18 @@
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTStopIndexUpdate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopIndexUpdate/currentStopIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTVehicleUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/vehicleRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/inPanic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/vehicleStopRequested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/movingForward"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/speakerActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/stopInformationActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/routeDeviation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/doorState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/tripState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/exitSide"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

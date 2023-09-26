@@ -124,13 +124,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="PTDoorChangeUpdate" eSuperTypes="#//PTPositionUpdate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTDoorSideType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTExitSideType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTDoorChangeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTDoorCountUpdate" abstract="true" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTDoorSideType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorSide" eType="#//PTExitSideType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTDoorCountingType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="in" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="out" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -204,6 +204,32 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTStopIndexUpdate" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTVehicleUpdate" eSuperTypes="#//PTUpdateValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleRef" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inPanic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Whether the emergy button  is pressed or not."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleStopRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Whether the stop button  is pressed or not."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="movingForward" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Default value is true."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speakerActive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopInformationActive"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeDeviation" eType="#//PTRouteDeviationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorState" eType="#//PTDoorOpenStateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="#//PTTripStateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exitSide" eType="#//PTExitSideType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTType">
     <eLiterals name="TRAM"/>
@@ -295,10 +321,6 @@
     <eLiterals name="UNIDENTIFIED" value="5"/>
     <eLiterals name="OTHER" value="6"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PTDoorSideType">
-    <eLiterals name="RIGHT"/>
-    <eLiterals name="LEFT" value="1"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTLocationStateType">
     <eLiterals name="AFTER_STOP"/>
     <eLiterals name="AT_STOP" value="1"/>
@@ -334,5 +356,30 @@
     <eLiterals name="FRIDAY" value="4"/>
     <eLiterals name="SATURDAY" value="5"/>
     <eLiterals name="SUNDAY" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTRouteDeviationType">
+    <eLiterals name="ON_ROUTE"/>
+    <eLiterals name="OFF_ROUTE" value="1"/>
+    <eLiterals name="UNKNOWN" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTDoorOpenStateType">
+    <eLiterals name="DOORS_OPEN"/>
+    <eLiterals name="ALL_DOORS_CLOSED" value="1"/>
+    <eLiterals name="SINGLE_DOOR_OPEN" value="2"/>
+    <eLiterals name="SINGLE_DOOR_CLOSED" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTExitSideType">
+    <eLiterals name="BOTH"/>
+    <eLiterals name="LEFT" value="1"/>
+    <eLiterals name="RIGHT" value="2"/>
+    <eLiterals name="UNKNOWN" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PTTripStateType">
+    <eLiterals name="EMPTY_RUN"/>
+    <eLiterals name="ON_TRIP" value="1"/>
+    <eLiterals name="OFF_TRIP" value="2"/>
+    <eLiterals name="TRIP_BREAK" value="3"/>
+    <eLiterals name="OFF_DUTY" value="4"/>
+    <eLiterals name="UNKNOWN" value="5"/>
   </eClassifiers>
 </ecore:EPackage>
