@@ -167,7 +167,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="stopUpdate" upperBound="-1"
         eType="#//PTStopUpdate" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PTStopUpdate">
+  <eClassifiers xsi:type="ecore:EClass" name="PTStopUpdate" eSuperTypes="#//PTUpdateValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expectedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime">
@@ -194,6 +194,16 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="updatedSchedule" eType="#//PTSchedule"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTAnnouncementUpdate" eSuperTypes="#//PTUpdateValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="annoucementRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="annoucementText" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="annoucementTTSText" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTStopIndexUpdate" eSuperTypes="#//PTUpdateValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTType">
     <eLiterals name="TRAM"/>

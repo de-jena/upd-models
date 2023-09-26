@@ -119,5 +119,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/recordedArrivalTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopUpdate/distanceFromNextStop"/>
     </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//AnnouncementUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//AnnouncementUpdate/announcementRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//AnnouncementUpdate/announcementText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//AnnouncementUpdate/announcementTTSText"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//StopIndexUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopIndexUpdate/currentStopIndex"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

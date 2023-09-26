@@ -168,5 +168,13 @@
     <genClasses ecoreClass="tos-publictransport.ecore#//PTScheduleUpdate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport.ecore#//PTScheduleUpdate/updatedSchedule"/>
     </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTAnnouncementUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTAnnouncementUpdate/annoucementRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTAnnouncementUpdate/annoucementText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTAnnouncementUpdate/annoucementTTSText"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTStopIndexUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopIndexUpdate/currentStopIndex"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

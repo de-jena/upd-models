@@ -99,7 +99,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDestinationNumber"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StopUpdate">
+  <eClassifiers xsi:type="ecore:EClass" name="StopUpdate" eSuperTypes="#//Update">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScheduleEntryIndex"
@@ -108,6 +108,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureExpected" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordedArrivalTime" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceFromNextStop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnnouncementUpdate" eSuperTypes="#//Update">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="announcementRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="announcementText" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="announcementTTSText" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StopIndexUpdate" eSuperTypes="#//Update">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
     <eLiterals name="BUS"/>
