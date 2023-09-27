@@ -49,6 +49,31 @@
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/PHONE_TO_ARRANGE"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//PickUpDropOffType/COORDINATE_WITH_DRIVER"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//RouteDeviationType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDeviationType/ON_ROUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDeviationType/OFF_ROUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//RouteDeviationType/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//DoorOpenStateType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DoorOpenStateType/DOORS_OPEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DoorOpenStateType/ALL_DOORS_CLOSED"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DoorOpenStateType/SINGLE_DOOR_OPEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//DoorOpenStateType/SINGLE_DOOR_CLOSED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//ExitSideType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ExitSideType/BOTH"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ExitSideType/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ExitSideType/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//ExitSideType/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//TripStateType">
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/EMPTY_RUN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/ON_TRIP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/OFF_TRIP"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/TRIP_BREAK"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/OFF_DUTY"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//TripStateType/UNKNOWN"/>
+    </genEnums>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//Response">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Response/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Response/message"/>
@@ -126,6 +151,17 @@
     </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//StopIndexUpdate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//StopIndexUpdate/currentStopIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//VehicleUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/inPanic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/stopRequested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/movingForward"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/speakerActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/stopInformationActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/routeDeviation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/doorState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/exitSide"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/tripState"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

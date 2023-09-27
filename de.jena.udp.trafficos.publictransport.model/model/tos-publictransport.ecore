@@ -307,6 +307,10 @@
     <eLiterals name="STOP_REQUESTED" value="6"/>
     <eLiterals name="TRIP_DATA" value="7"/>
     <eLiterals name="TIMETABLE" value="8"/>
+    <eLiterals name="CURRENT_ANNOUNCEMENT" value="6"/>
+    <eLiterals name="VEHICLE_DATA" value="7"/>
+    <eLiterals name="CURRENT_STOP_INDEX" value="8"/>
+    <eLiterals name="CURRENT_STOP_POINT" value="9"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTDoorChangeType">
     <eLiterals name="DOOR_CLOSE"/>

@@ -119,6 +119,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="StopIndexUpdate" eSuperTypes="#//Update">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentStopIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleUpdate" eSuperTypes="#//Update">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inPanic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Whether the emergency button has been pressed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Whether the stop button has been pressed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="movingForward" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Default value is true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speakerActive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopInformationActive"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeDeviation" eType="#//RouteDeviationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doorState" eType="#//DoorOpenStateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exitSide" eType="#//ExitSideType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="#//TripStateType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
     <eLiterals name="BUS"/>
     <eLiterals name="E_BUS" value="1"/>
@@ -157,5 +181,30 @@
     <eLiterals name="NOT_AVAILABLE" value="1"/>
     <eLiterals name="PHONE_TO_ARRANGE" value="2"/>
     <eLiterals name="COORDINATE_WITH_DRIVER" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RouteDeviationType">
+    <eLiterals name="ON_ROUTE"/>
+    <eLiterals name="OFF_ROUTE" value="1"/>
+    <eLiterals name="UNKNOWN" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DoorOpenStateType">
+    <eLiterals name="DOORS_OPEN" literal="DOORS_OPEN"/>
+    <eLiterals name="ALL_DOORS_CLOSED" value="1"/>
+    <eLiterals name="SINGLE_DOOR_OPEN" value="2"/>
+    <eLiterals name="SINGLE_DOOR_CLOSED" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExitSideType">
+    <eLiterals name="BOTH" literal="BOTH"/>
+    <eLiterals name="LEFT" value="1"/>
+    <eLiterals name="RIGHT" value="2"/>
+    <eLiterals name="UNKNOWN" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TripStateType">
+    <eLiterals name="EMPTY_RUN" literal="EMPTY_RUN"/>
+    <eLiterals name="ON_TRIP" value="1"/>
+    <eLiterals name="OFF_TRIP" value="2"/>
+    <eLiterals name="TRIP_BREAK" value="3"/>
+    <eLiterals name="OFF_DUTY" value="4"/>
+    <eLiterals name="UNKNOWN" value="5"/>
   </eClassifiers>
 </ecore:EPackage>

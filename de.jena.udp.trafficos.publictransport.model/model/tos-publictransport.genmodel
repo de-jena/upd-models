@@ -40,6 +40,10 @@
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/STOP_REQUESTED"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/TRIP_DATA"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/TIMETABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/CURRENT_ANNOUNCEMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/VEHICLE_DATA"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/CURRENT_STOP_INDEX"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/CURRENT_STOP_POINT"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTDoorChangeType">
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorChangeType/DOOR_CLOSE"/>
