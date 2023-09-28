@@ -231,6 +231,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="#//PTTripStateType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exitSide" eType="#//PTExitSideType"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PTOnlineUpdate" eSuperTypes="#//PTUpdateValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="online" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTType">
     <eLiterals name="TRAM"/>
     <eLiterals name="CITY_BUS" value="1"/>
@@ -311,6 +315,7 @@
     <eLiterals name="VEHICLE_DATA" value="7"/>
     <eLiterals name="CURRENT_STOP_INDEX" value="8"/>
     <eLiterals name="CURRENT_STOP_POINT" value="9"/>
+    <eLiterals name="ONLINE" value="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PTDoorChangeType">
     <eLiterals name="DOOR_CLOSE"/>

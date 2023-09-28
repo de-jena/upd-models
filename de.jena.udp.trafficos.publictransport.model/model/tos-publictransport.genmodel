@@ -44,6 +44,7 @@
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/VEHICLE_DATA"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/CURRENT_STOP_INDEX"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/CURRENT_STOP_POINT"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTUpdateValueType/ONLINE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport.ecore#//PTDoorChangeType">
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport.ecore#//PTDoorChangeType/DOOR_CLOSE"/>
@@ -212,6 +213,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/doorState"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/tripState"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicleUpdate/exitSide"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-publictransport.ecore#//PTOnlineUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTOnlineUpdate/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTOnlineUpdate/online"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
