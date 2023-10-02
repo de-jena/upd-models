@@ -11,10 +11,13 @@
   <genPackages prefix="TOSPublicTransportApi" basePackage="de.jena.udp.model.trafficos"
       disposableProviderFactory="true" ecorePackage="tos-publictransport-api.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//VehicleType">
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/BUS"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/E_BUS"/>
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/TRAM"/>
-      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/TRAIN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/CITY_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/REGIONAL_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/E_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/SCHOOL_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/NIGHT_BUS"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//VehicleType/OTHER"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="tos-publictransport-api.ecore#//LocationStateType">
       <genEnumLiterals ecoreEnumLiteral="tos-publictransport-api.ecore#//LocationStateType/AFTER_STOP"/>

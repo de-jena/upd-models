@@ -148,10 +148,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="online" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
-    <eLiterals name="BUS"/>
-    <eLiterals name="E_BUS" value="1"/>
-    <eLiterals name="TRAM" value="2"/>
-    <eLiterals name="TRAIN" value="3"/>
+    <eLiterals name="TRAM"/>
+    <eLiterals name="CITY_BUS" value="1"/>
+    <eLiterals name="REGIONAL_BUS" value="2"/>
+    <eLiterals name="E_BUS" value="3"/>
+    <eLiterals name="SCHOOL_BUS" value="4"/>
+    <eLiterals name="NIGHT_BUS" value="5"/>
+    <eLiterals name="OTHER" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LocationStateType">
     <eLiterals name="AFTER_STOP"/>
