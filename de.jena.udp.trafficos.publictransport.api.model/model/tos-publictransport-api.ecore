@@ -143,6 +143,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exitSide" eType="#//ExitSideType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tripState" eType="#//TripStateType"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OnlineUpdate" eSuperTypes="#//Update">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//VehicleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="online" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
     <eLiterals name="BUS"/>
     <eLiterals name="E_BUS" value="1"/>

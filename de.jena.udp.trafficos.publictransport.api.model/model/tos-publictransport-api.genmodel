@@ -163,5 +163,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/exitSide"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//VehicleUpdate/tripState"/>
     </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineUpdate/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineUpdate/online"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
