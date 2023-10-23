@@ -186,6 +186,7 @@
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTStopUpdate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/refStopId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/ibisID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/expectedArrivalTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/expectedDepartureTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTStopUpdate/recordedArrivalTime"/>
