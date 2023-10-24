@@ -8,10 +8,18 @@
   <eAnnotations source="Version">
     <details key="value" value="1.1.1"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="PTUpdatableObject" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The source of this data update (Ibis, VDV, etc.). Might be useful for further filtering in the API."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTVehicle" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PTRoute" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PTRoute" eSuperTypes="#//PTUpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routeId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -20,7 +28,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PTRouteType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PTTimetableEntry" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PTTimetableEntry" eSuperTypes="#//PTUpdatableObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This is just a single entry in a timetable, e.g. the single stop at a single time for a single line. "/>
     </eAnnotations>
@@ -60,7 +68,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PTStop" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PTStop" eSuperTypes="#//PTUpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DHID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This is a unique identifier for the stop, made up by a combination of the municipality code and the actual stop id."/>
@@ -76,7 +84,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//Position"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PTSchedule" eSuperTypes="../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//IdElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PTSchedule" eSuperTypes="#//PTUpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refRouteId" lowerBound="1"

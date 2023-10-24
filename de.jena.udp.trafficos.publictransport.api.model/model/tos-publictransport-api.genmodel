@@ -81,6 +81,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//Response/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Response/message"/>
     </genClasses>
+    <genClasses ecoreClass="tos-publictransport-api.ecore#//UpdatableObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//UpdatableObject/dataSource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//UpdatableObject/updateDate"/>
+    </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//OnlineVehicle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineVehicle/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//OnlineVehicle/type"/>
@@ -125,6 +129,7 @@
     <genClasses ecoreClass="tos-publictransport-api.ecore#//Update">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Update/refVehicleId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Update/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport-api.ecore#//Update/dataSource"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport-api.ecore#//PositionUpdate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-publictransport-api.ecore#//PositionUpdate/position"/>

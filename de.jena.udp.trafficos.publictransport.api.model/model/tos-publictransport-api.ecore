@@ -10,11 +10,15 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdatableObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OnlineVehicle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//VehicleType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Schedule">
+  <eClassifiers xsi:type="ecore:EClass" name="Schedule" eSuperTypes="#//UpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refRouteId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -31,7 +35,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyDays" upperBound="-1"
         eType="#//ScheduleFrequencyDayType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ScheduleEntry">
+  <eClassifiers xsi:type="ecore:EClass" name="ScheduleEntry" eSuperTypes="#//UpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScheduleId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entryIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalScheduled" eType="ecore:EDataType ../../de.jena.udp.trafficos.common.model/model/tos-common.ecore#//ELocalTime"/>
@@ -56,7 +60,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="refStopId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StopInformation">
+  <eClassifiers xsi:type="ecore:EClass" name="StopInformation" eSuperTypes="#//UpdatableObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DHID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -77,6 +81,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PositionUpdate" eSuperTypes="#//Update">
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="#//Position"
