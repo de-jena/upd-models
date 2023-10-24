@@ -111,6 +111,7 @@
     </genEnums>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTUpdatableObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTUpdatableObject/updateDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTUpdatableObject/dataSource"/>
     </genClasses>
     <genClasses ecoreClass="tos-publictransport.ecore#//PTVehicle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-publictransport.ecore#//PTVehicle/type"/>
