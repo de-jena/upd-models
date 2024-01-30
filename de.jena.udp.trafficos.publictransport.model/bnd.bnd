@@ -1,6 +1,5 @@
 -buildpath: \
-	org.osgi.service.condition,\
-	de.jena.udp.trafficos.common.model;version=latest,\
+	de.jena.udp.trafficos.common.model;version=latest
 
 # sets the usually required buildpath, you can extend it with the normal -buildpath to your liking
 -library: enable-emf
@@ -20,4 +19,4 @@
 # Bundle Annotations		
 -includeresource.model: model=model
 
-Bundle-Version: 1.1.1.SNAPSHOT
+Bundle-Version: 1.2.0.SNAPSHOT

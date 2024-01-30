@@ -1,5 +1,4 @@
 -buildpath: \
-	org.osgi.service.condition,\
 	de.jena.udp.trafficos.common.model;version=latest
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
@@ -20,5 +19,5 @@
 # Bundle Annotations		
 -includeresource.model: model=model
 
-Bundle-Version: 1.1.1.SNAPSHOT
+Bundle-Version: 1.2.0.SNAPSHOT
 

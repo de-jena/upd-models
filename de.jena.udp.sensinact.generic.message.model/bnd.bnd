@@ -24,4 +24,4 @@
 	com.fasterxml.jackson.core.jackson-core
 
 src: ${^src},src-gen
-Bundle-Version: 1.1.1.SNAPSHOT
+Bundle-Version: 1.2.0.SNAPSHOT
