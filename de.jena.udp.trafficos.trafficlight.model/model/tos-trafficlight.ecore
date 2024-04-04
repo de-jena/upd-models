@@ -28,6 +28,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="signalType" eType="#//SignalType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="positions" upperBound="3"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="observedArea" eType="ecore:EClass geojson.ecore#//FeatureCollection"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TLModuleType">
     <eLiterals name="LML"/>
