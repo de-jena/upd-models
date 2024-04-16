@@ -53,7 +53,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/signalGroups"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Geojson" ecorePackage="geojson.ecore#/">
+  <genPackages prefix="Geojson" basePackage="de.jena.udp.model" ecorePackage="geojson.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="geojson.ecore#//FeatureType">
       <genEnumLiterals ecoreEnumLiteral="geojson.ecore#//FeatureType/Feature"/>
     </genEnums>
