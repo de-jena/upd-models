@@ -51,6 +51,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLConfiguration/intersectionName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/modules"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/signalGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/geoJson"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Geojson" basePackage="de.jena.udp.model" ecorePackage="geojson.ecore#/">
