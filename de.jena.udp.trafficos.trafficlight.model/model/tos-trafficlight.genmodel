@@ -53,14 +53,23 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/signalGroups"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/geoJson"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/phases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/monitoredPorts"/>
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLPhase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLPhase/phase"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLPhase/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLPhase/ioStates"/>
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLPhaseState">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLPhaseState/state"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLPhaseState/signalGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//IOPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOPort/id"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//IOData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOData/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOData/value"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Geojson" basePackage="de.jena.udp.model" ecorePackage="geojson.ecore#/">
