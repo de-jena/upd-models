@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.jena.mdo.ibis.customer.info.service.model/src"
+    modelPluginID="de.jena.mdo.ibis.customer.info.service.model" modelName="doorstateservice"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" suppressGenModelAnnotations="false" copyrightFields="false"
+    usedGenPackages="../../de.jena.ibis.common.model/model/ibis-common.genmodel#//common ../../de.jena.ibis.enumerations.model/model/ibis-enumerations.genmodel#//enumerations"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>ibis-doorstateservice.ecore</foreignModel>
+  <genPackages prefix="IbisDoorStateService" basePackage="de.jena.ibis.model" resource="XML"
+      disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"
+      ecorePackage="ibis-doorstateservice.ecore#/">
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//DoorOpenStatesResponseData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOpenStatesResponseData/timeStamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOpenStatesResponseData/doorOpenStates"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//DoorOpenStatesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOpenStatesResponse/getDoorOpenStatesResponseData"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//DoorOperationStatesResponseData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOperationStatesResponseData/timeStamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOperationStatesResponseData/doorOperationStates"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//DoorOperationStatesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//DoorOperationStatesResponse/getDoorOperationStatesResponseData"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//RetrieveSpecificDoorOpenStateRequest">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOpenStateRequest/doorID"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//RetrieveSpecificDoorOpenStateResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOpenStateResponse/doorOpenState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOpenStateResponse/errorMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//RetrieveSpecificDoorOperationStateRequest">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOperationStateRequest/doorID"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//RetrieveSpecificDoorOperationStateResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOperationStateResponse/doorOperationState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//RetrieveSpecificDoorOperationStateResponse/errorMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//SpecificDoorOpenState">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOpenState/timeStamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOpenState/doorID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOpenState/openState"/>
+    </genClasses>
+    <genClasses ecoreClass="ibis-doorstateservice.ecore#//SpecificDoorOperationState">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOperationState/timeStamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOperationState/doorID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ibis-doorstateservice.ecore#//SpecificDoorOperationState/operationState"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
