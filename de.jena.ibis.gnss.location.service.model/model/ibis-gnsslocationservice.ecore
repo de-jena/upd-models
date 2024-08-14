@@ -4,7 +4,7 @@
     nsPrefix="gnsslocationservice">
   <eClassifiers xsi:type="ecore:EClass" name="GNSSLocationData">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="name" value="GNSSLocationService.DataStructure"/>
+      <details key="name" value="GNSSLocationService.Data"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="latitude" lowerBound="1"
