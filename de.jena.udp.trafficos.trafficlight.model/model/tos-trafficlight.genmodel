@@ -21,6 +21,8 @@
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BLINKING"/>
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BUTTON"/>
       <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/BLIND_BUTTON"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="tos-trafficlight.ecore#//SignalType/RED_AMBER"/>
     </genEnums>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLModule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLModule/id"/>

@@ -47,6 +47,8 @@
     <eLiterals name="BLINKING" value="5"/>
     <eLiterals name="BUTTON" value="6"/>
     <eLiterals name="BLIND_BUTTON" value="7"/>
+    <eLiterals name="GREEN" value="8" literal="GREEN"/>
+    <eLiterals name="RED_AMBER" value="9" literal="RED_AMBER"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TLSignalState">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
