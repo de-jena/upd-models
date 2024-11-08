@@ -51,10 +51,8 @@
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLConfiguration/intersectionId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//TLConfiguration/intersectionName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/modules"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/signalGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/subcircles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/geoJson"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/phases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//TLConfiguration/monitoredPorts"/>
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//TLPhase">
@@ -72,6 +70,17 @@
     <genClasses ecoreClass="tos-trafficlight.ecore#//IOData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOData/port"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOData/value"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//Subcircle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//Subcircle/signalGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//Subcircle/phases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//Subcircle/serialPorts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//Subcircle/name"/>
+    </genClasses>
+    <genClasses ecoreClass="tos-trafficlight.ecore#//SerialPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//SerialPort/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//SerialPort/baud"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tos-trafficlight.ecore#//SerialPort/modules"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Geojson" basePackage="de.jena.udp.model" ecorePackage="geojson.ecore#/">

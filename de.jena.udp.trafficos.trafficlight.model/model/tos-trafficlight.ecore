@@ -64,14 +64,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
-        eType="#//TLModule" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="signalGroups" upperBound="-1"
-        eType="#//TLSignalGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subcircles" upperBound="-1"
+        eType="#//Subcircle" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="geoJson" eType="ecore:EClass geojson.ecore#//GeoJSON"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="phases" upperBound="-1"
-        eType="#//TLPhase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="monitoredPorts" upperBound="-1"
         eType="#//IOPort" containment="true"/>
   </eClassifiers>
@@ -93,5 +89,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="IOData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subcircle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalGroups" upperBound="-1"
+        eType="#//TLSignalGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="phases" upperBound="-1"
+        eType="#//TLPhase" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serialPorts" upperBound="-1"
+        eType="#//SerialPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SerialPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="230400"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="#//TLModule" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
