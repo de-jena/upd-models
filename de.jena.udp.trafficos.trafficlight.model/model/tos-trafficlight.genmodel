@@ -66,6 +66,7 @@
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//IOPort">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOPort/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOPort/invert"/>
     </genClasses>
     <genClasses ecoreClass="tos-trafficlight.ecore#//IOData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tos-trafficlight.ecore#//IOData/port"/>
